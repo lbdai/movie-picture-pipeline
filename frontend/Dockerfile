@@ -11,7 +11,7 @@ COPY package*.json ./
 # Install packages
 RUN npm install
 
-#RUN chmod +x /usr/local/bin/serve
+
 # Copy code
 COPY . .
 
@@ -20,6 +20,8 @@ RUN npm run build
 
 # Expose the port used by the React app
 EXPOSE 3000
+
+RUN chmod +x /usr/local/bin/serve
 
 # Start the React app when the container starts
 CMD ["npm", "run", "serve"]
