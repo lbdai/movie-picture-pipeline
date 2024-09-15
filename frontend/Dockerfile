@@ -10,6 +10,8 @@ COPY package*.json ./
 
 # Install packages
 RUN npm install
+
+RUN chmod +x /usr/local/bin/serve
 # Copy code
 COPY . .
 
