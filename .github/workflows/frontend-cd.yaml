@@ -65,7 +65,10 @@ jobs:
         with:
           path: ~/.npm
           key: npm-cache-${{ hashFiles('**/package-lock.json') }}
-  
+          
+      - name: Set executable permissions for react-scripts
+        run: chmod +x ./node_modules/.bin/react-scripts
+        
       - name: Install dependencies
         run: |
           npm install
