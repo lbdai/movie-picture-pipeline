@@ -65,10 +65,7 @@ jobs:
         with:
           path: ~/.npm
           key: npm-cache-${{ hashFiles('**/package-lock.json') }}
-          
-      - name: Set executable permissions for react-scripts
-        run: chmod +x ./node_modules/.bin/react-scripts
-        
+
       - name: Install dependencies
         run: |
           npm install
@@ -87,9 +84,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-
-      - name: Set executable permissions for react-scripts
-        run: chmod +x ./node_modules/.bin/react-scripts
   
       - name: Configure AWS Credentials for Deployment
         uses: aws-actions/configure-aws-credentials@v1
