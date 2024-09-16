@@ -11,7 +11,7 @@ env:
 
 jobs:
   lint:
-    name: LINT JOB
+    name: lint process
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -34,7 +34,7 @@ jobs:
         run: |
           pipenv install
   test: 
-    name: TEST JOB
+    name: unit tests
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -61,7 +61,7 @@ jobs:
         run: | 
           pipenv run test
   build:
-    name: BUILD JOB
+    name: BUILD package
     needs: [lint, test]
     runs-on: ubuntu-latest
     defaults:
