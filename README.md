@@ -1,5 +1,5 @@
-BE services: 
-FE services: 
+BE services: a82a1baf77f8a4145ba1e18c3800758d-1102264911.us-east-1.elb.amazonaws.com
+FE services: aa26a9e93b98647e694e78529e5482e0-494292232.us-east-1.elb.amazonaws.com
 # Movie Picture Pipeline
 
 
